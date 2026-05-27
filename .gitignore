@@ -9,6 +9,7 @@ target/
 .css/
 .js/
 
+
 ### STS ###
 .apt_generated
 .classpath
