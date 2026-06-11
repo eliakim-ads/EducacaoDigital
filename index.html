@@ -90,6 +90,40 @@
           </div>
         </div><br>
 
+        <section class="highlight-banner">
+          <div class="highlight-banner__content">
+            <div class="highlight-banner__image">
+              <img src="images/campanha6.png" alt="Campanha de reciclagem e descarte consciente" class="banner-img">
+            </div>
+            <div class="highlight-banner__text">
+              <span class="text">PONTO DE COLETA 📍</span>
+              <h2>Faculdade SENAC Rio </h2>
+              <p> O SENAC integra o Sistema Fecomércio e contribui ativamente para iniciativas <br> e projetos voltados à sustentabilidade.</p>
+              <p><strong>Endereço: Rua Santa Luzia, 735, 5º andar - Centro, Rio de Janeiro - RJ.</strong> </p>
+            </div>
+            
+          </div>
+        </section><br>
+
+        <div class="word-carousel word-carousel--reverse">
+          <div class="word-carousel__track_2">
+            <span>PARTICIPE</span>
+            <span>EDUQUE</span>
+            <span>DENUNCIE</span>
+            <span>TRANSFORME</span>
+            <span>CUIDE</span>
+            <span>SUSTENTE</span>
+            <span>PARTICIPE</span>
+            <span>EDUQUE</span>
+            <span>DENUNCIE</span>
+            <span>TRANSFORME</span>
+            <span>CUIDE</span>
+            <span>SUSTENTE</span>
+          </div>
+        </div><br>
+
+        
+
         <div class="text" id="impacto">
           <span class="text">O PROBLEMA E O IMPACTO</span><br>
           <h1>Cada eletrônico descartado errado pode virar contaminação.</h1>
@@ -125,9 +159,8 @@
             <div class="card stats-card">
               <div class="card-body">
                 <div class="stats-percent">50M</div>
-                <h5 class="card-title">toneladas de lixo eletrônico</h5>
-                <p class="card-text">São geradas anualmente no mundo, a maioria descartada incorretamente, causando
-                  danos ambientais.</p>
+                <h5 class="card-title">toneladas de lixo eletrônico por ano</h5>
+                <p class="card-text">São geradas no mundo, a maioria descartada incorretamente, causando danos ambientais.</p>
               </div>
             </div>
           </div>
@@ -135,8 +168,17 @@
 
 
         <div class="col-12 text-center">
-          <img src="images/campanha1.png" class="banner-img" alt="Campanha de Descarte Consciente">
-        </div> <br> <br> <br>
+          <div class="flip-card" id="flipCard" tabindex="0" role="button" aria-label="Clique para ver a imagem alternativa">
+            <div class="flip-card__inner">
+              <div class="flip-card__face">
+                <img src="images/campanha1.png" class="banner-img" alt="Campanha de Descarte Consciente">
+              </div>
+              <div class="flip-card__face flip-card__back">
+                <img src="images/campanha5.png" class="banner-img" alt="Imagem alternativa da campanha">
+              </div>
+            </div>
+          </div>
+        </div> <br> <br>
 
         <div class="text" id="beneficios">
           <span class="text">BENEFÍCIOS DA PARTICIPAÇÃO</span>
@@ -252,7 +294,7 @@
 
 
         <div class="text" id="seminario">
-          <span class="text">TI VERDE</span>
+          <span class="text">Educação Digital</span>
           <h1>Levantamento realizado <br> para o seminário sobre</h1>
           <span class="text">LIXO ELETRÔNICO</span><br>
         </div>
@@ -326,6 +368,29 @@
         </div>
       </footer>
       <script src="js/bootstrap.bundle.min.js"></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const flipCard = document.getElementById('flipCard');
+
+          if (!flipCard) return;
+
+          const toggleFlip = function () {
+            const isFlipped = flipCard.classList.toggle('is-flipped');
+            flipCard.setAttribute(
+              'aria-label',
+              isFlipped ? 'Clique para voltar à imagem inicial' : 'Clique para ver a imagem alternativa'
+            );
+          };
+
+          flipCard.addEventListener('click', toggleFlip);
+          flipCard.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter' || event.key === ' ') {
+              event.preventDefault();
+              toggleFlip();
+            }
+          });
+        });
+      </script>
     </div>
 
 </body>
